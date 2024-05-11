@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:orientation="vertical"
+    android:background="@color/grismodulo2"
+    tools:context=".modulo22">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/azulModulo1.2"
+        android:text="Modulo 2"
+        android:drawableStart="@drawable/menu"
+        android:drawableEnd="@drawable/logo_nombre_modulos"
+        android:padding="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold|italic" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_titulo1ejercicio"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:paddingTop="5dp"
+                android:background="@color/white"
+                android:drawableStart="@drawable/vectoramarillo"
+                android:textStyle="bold"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/titulo_modulo2_ejercicio3" />
+            <VideoView
+                android:id="@+id/video_ejercicio1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="15dp"/>
+
+            <TextView
+                android:id="@+id/text_descripcion_ejercicio1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/descripcion_modulo2_ejercicio3"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:textSize="12sp"
+
+                />
+            <TextView
+                android:id="@+id/text_titulo2ejercicio"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:paddingTop="5dp"
+                android:background="@color/white"
+                android:drawableStart="@drawable/vectoramarillo"
+                android:textStyle="bold"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/titulo_modulo2_ejercicio4" />
+
+            <VideoView
+                android:id="@+id/video_ejercicio2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="15dp"/>
+
+            <TextView
+                android:id="@+id/text_descripcion_ejercicio2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/descripcion_modulo2_ejercicio4"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:background="@color/verdeNavbar"
+            android:translationZ="-5dp"
+            app:itemBackground="@color/verdeNavbar"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white">
+
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/verdeNavbar"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/imageView_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/logo_navbar_perfil"
+                    android:src="@drawable/logo_perfil" />
+
+                <ImageView
+                    android:id="@+id/imageView_modulos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/logo_navbar_modulos"
+                    android:src="@drawable/logo_modulos" />
+
+                <ImageView
+                    android:id="@+id/imageView_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/logo_navbar_inicio"
+                    android:src="@drawable/logo_inicio" />
+
+                <ImageView
+                    android:id="@+id/imageView_realidad_virtual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/logo_navbar_vr"
+                    android:src="@drawable/logo_vr" />
+
+                <ImageView
+                    android:id="@+id/imageView_configuracion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/logo_navbar_config"
+                    android:src="@drawable/logo_config" />
+
+            </LinearLayout>
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </RelativeLayout>
+</LinearLayout>

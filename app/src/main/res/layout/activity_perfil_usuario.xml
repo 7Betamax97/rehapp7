@@ -1,0 +1,293 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:orientation="vertical"
+    android:background="@color/azulModulo1"
+    tools:context=".activity_perfil_usuario">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:background="@color/azulModulo1.2"
+        android:drawableStart="@drawable/menu"
+        android:drawableEnd="@drawable/logo_nombre_modulos"
+        android:padding="10dp"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:text="!Hello friends¡"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="118dp"
+                    android:layout_height="113dp"
+                    android:layout_marginStart="40dp"
+                    android:src="@drawable/icon_perfil" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="40dp"
+                    android:orientation="vertical"
+
+                    >
+                    <EditText
+                        android:id="@+id/editTextText"
+                        android:layout_width="161dp"
+                        android:layout_height="34dp"
+                        android:drawableStart="@drawable/imagen_nombre_usuario"
+                        android:ems="10"
+                        android:hint="Nombre"
+                        android:inputType="text"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextEmailAddress"
+                        android:layout_width="161dp"
+                        android:layout_height="34dp"
+                        android:drawableStart="@drawable/imagen_correo_usuario"
+                        android:ems="10"
+                        android:hint="Correo"
+                        android:inputType="textEmailAddress"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/editTextPhone"
+                        android:layout_width="161dp"
+                        android:layout_height="34dp"
+                        android:drawableStart="@drawable/imagen_telefono_usuario"
+                        android:ems="10"
+                        android:hint="Telefono"
+                        android:inputType="phone"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="30dp">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/azulModulo1"
+                    android:src="@drawable/imagen_boton_preferencias" />
+
+
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/azulModulo1"
+                    android:src="@drawable/imagen_boton_editar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/modulo1RehabilitacionMuñeca"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:drawableStart="@drawable/vectoramarillo"
+                android:drawableEnd="@drawable/flecha_amarilla"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:text="Modulo1:Rehabilitacion para fractura de muñeca"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/modulo2SindromeTunel"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/vectoramarillo"
+                android:drawableEnd="@drawable/flecha_amarilla"
+                android:layout_margin="10dp"
+                android:paddingEnd="5dp"
+                android:text="Módulo 2.Ejercicios para aliviar el sindrome del tunel carpiano"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/modulo3DedoGatillo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:background="@color/white"
+                android:drawableStart="@drawable/vectoramarillo"
+                android:drawableEnd="@drawable/flecha_amarilla"
+                android:text="Módulo 3. Ejercicios para mejorar dedo en gatillo"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/modulo4ArtrosisMano"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/vectoramarillo"
+                android:drawableEnd="@drawable/flecha_amarilla"
+                android:layout_margin="10dp"
+                android:paddingEnd="5dp"
+                android:text="Módulo 4. Artrosis de mano y de los dedos  "
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:drawableStart="@drawable/vectoramarillo"
+                android:drawableEnd="@drawable/flecha_amarilla"
+                android:text="@string/modulo5enlace"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:drawableStart="@drawable/icono_fisioterapeuta"
+                android:drawableEnd="@drawable/flecha_amarilla"
+                android:drawablePadding="10dp"
+                android:text="fisioterapeuta"
+                android:textSize="17sp" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="70dp">
+
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@android:drawable/ic_menu_add"
+
+                    android:backgroundTint="@color/azulModulo1"/>
+
+                <ImageButton
+                    android:id="@+id/imagefoto_fisio1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/vector_fisio_perfil_usuario"
+                    android:src="@drawable/fisio_perfil_usuario" />
+
+                <ImageButton
+                    android:id="@+id/imagefoto_fisio2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/vector_fisio_perfil_usuario"
+                    android:src="@drawable/fisio_perfil_usuario" />
+
+                <ImageButton
+                    android:id="@+id/imagefoto_fisio3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/vector_fisio_perfil_usuario"
+                    android:src="@drawable/fisio_perfil_usuario" />
+
+                <ImageButton
+                    android:id="@+id/imagefoto_fisio4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/vector_fisio_perfil_usuario"
+                    android:src="@drawable/fisio_perfil_usuario" />
+            </LinearLayout>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="70dp"
+                android:layout_marginVertical="5dp">
+
+                <TextView
+                    android:id="@+id/mensajePerfil"
+                    android:layout_width="118dp"
+                    android:layout_height="40dp"
+                    android:text="mensajes"
+                    android:background="@drawable/vector_titulo_modulos"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="17dp"
+                    android:padding="8dp"
+                    android:drawableStart="@drawable/buson_correo"
+                    android:drawablePadding="5dp" />
+
+                <TextView
+                    android:id="@+id/calendarioPerfil"
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:text="calendario"
+                    android:background="@drawable/vector_titulo_modulos"
+                    android:padding="8dp"
+                    android:textSize="17sp"
+                    android:drawableStart="@drawable/imagen_calendario"
+                    android:drawablePadding="5dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
