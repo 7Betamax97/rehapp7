@@ -20,7 +20,7 @@
         android:padding="10dp"
         android:layout_margin="1dp"
         android:gravity="center"
-        android:text="!Hello friends¡"
+        android:text="!Hello friend¡"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="26sp"
