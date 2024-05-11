@@ -176,24 +176,52 @@
 
 
     <string name="descripcion_modulo4_ejercicio1">
-        1.Coloque el antebrazo sobre una mesa, con la mano y la muñeca afectada extendidas fuera de la mesa y la palma hacia abajo.\n.\n
-        2.Doble la muñeca para mover la mano hacia arriba y deje que la mano se cierre en un puño, luego baje la mano y permita que sus dedos se relajen .\n.\n
-        3.Mantenga cada posicion durante 6 segundos. Repita de 8 a 12 veces. Reduzca la intensidad del ejercicio si empieza a sentir dolor.</string>
+        1. cogeremos un dedo haciendo un puño con la otra mano y realizaremos tracción suave 10 segundos.\n.\n
+        2. Iremos cambiando de dedo. Lo realizaremos durante 10-15 minutos 2-3 veces al día.\n.\n
+        3. Reduzca la intensidad del ejercicio si empieza a sentir dolor..</string>
 
     <string name="descripcion_modulo4_ejercicio2">
-        1.Estando sentado, coloque el antebrazo y la muñeca afectada sobre su muslo, con la palma hacia abajo.\n.\n
-        2.Gire la mano de forma que el dorso de su mano se apoye en el muslo y la palma quede hacia arriba. Alterne entre la palma hacia arriba y la palma hacia abajo mientras mantiene el antebrazo sobre el muslo.\n.\n
-        3.Repita de 8 a 12 veces. Reduzca la intensidad del ejercicio si empieza a sentir dolor.</string>
+        1.realizaremos extensión progresiva suave manteniendo el máximo que no provoque dolor durante 510 segundos, intentando aumentar con cada repetición. Iremos cambiando de dedo. Lo realizaremos durante 10-15 minutos 2-3 veces al día. .\n.\n
+        2.repitiendo varias veces al día .Reduzca la intensidad del ejercicio si empieza a sentir dolor.</string>
 
     <string name="descripcion_modulo4_ejercicio3">
-        1.Coloque el antebrazo sobre una mesa, con la mano y la muñeca afectada extendidas fuera de la mesa y la palma hacia abajo.\n.\n
-        2.Doble la muñeca para mover la mano hacia arriba y deje que la mano se cierre en un puño, luego baje la mano y permita que sus dedos se relajen .\n.\n
-        3.Mantenga cada posicion durante 6 segundos. Repita de 8 a 12 veces. Reduzca la intensidad del ejercicio si empieza a sentir dolor.</string>
+        1.podemos realizar dos tipos de ejercicios de fuerza: Unos trabajando con todos los dedos a la vez, utilizando una pelota elástica y comprimiéndola o mediante una goma elástica estirándola entre los dedos. Reduzca la intensidad del ejercicio si empieza a sentir dolor.\n.\n
+        2.En los segundos utilizaremos una goma elástica para fortalecer cada dedo. Este ejercicio consistirá en tirar de la goma (fijada en un objeto o con la otra mano) flexionando o estirando el dedo y mantener la postura durante 10 segundos aproximadamente. Iremos cambiando de dedo. .</string>
 
     <string name="descripcion_modulo4_ejercicio4">
-        1.Coloque el antebrazo sobre una mesa, con la mano y la muñeca afectada extendidas fuera de la mesa y la palma hacia abajo.\n.\n
-        2.Doble la muñeca para mover la mano hacia arriba y deje que la mano se cierre en un puño, luego baje la mano y permita que sus dedos se relajen .\n.\n
-        3.Mantenga cada posicion durante 6 segundos. Repita de 8 a 12 veces. Reduzca la intensidad del ejercicio si empieza a sentir dolor.</string>
+        1.Empieza por mantener la mano y los dedos rectos y juntos. Dobla tus dedos suavemente, como si tu mano estuviera sosteniendo una lata o una botella.\n.\n
+        2.Con movimientos lentos y suaves, vuelve a poner la mano en la posición inicial. Repite el ejercicio cinco veces con cada mano.</string>
+
+    //string modulo5 //
+
+    <string name="titulo_modulo5_ejercicio1">Extension del dedo</string>
+    <string name="titulo_modulo5_ejercicio2">Flexión de DIP</string>
+    <string name="titulo_modulo5_ejercicio3">Apretar una toalla</string>
+    <string name="titulo_modulo5_ejercicio4">Agarrar una toalla</string>
+
+
+    <string name="descripcion_modulo5_ejercicio1">
+        1. Coloque la mano plana sobre una mesa con la palma hacia abajo.\n.\n
+        2. Levante el dedo afectado de la mesa y luego bajelo.\n.\n
+        3. Repita de 8 a 12 veces. dedo. Lo realizaremos durante 10-15 minutos 2-3 veces al día.\n.\n
+        4. Reduzca la intensidad del ejercicio si empieza a sentir dolor.</string>
+
+    <string name="descripcion_modulo5_ejercicio2">
+        1.Con la mano buena, sujete el dedo afectado. El pulgar estara¡ en la parte superior del dedo, justo por debajo de la articulacion que esta mas cerca de la uña.\n.\n
+        2.Doble lentamente el dedo afectado solo en la articulacion mas cercana a la uña. Mantenga la posicion durante unos 6 segundos.\n.\n
+        3.Repita de 8 a 12 veces.</string>
+
+    <string name="descripcion_modulo5_ejercicio3">
+        1.Coloque una toalla pequeña enrollada sobre una mesa.\n.\n
+        2.Con la palma hacia abajo, agarre la toalla y aprietela durante unos 6 segundos. Luego estire lentamente los dedos para soltar la toalla.\n.\n
+        3.Repita de 8 a 12 veces.\n.\n
+        4.Reduzca la intensidad del ejercicio si empieza a sentir dolor.</string>
+
+    <string name="descripcion_modulo5_ejercicio4">
+        1.Doble una toalla pequeña a la mitad y coloquela sobre una mesa.\n.\n
+        2.Coloque la mano plana sobre la toalla con la palma hacia abajo. Agarre la toalla y aprietela hacia usted hasta que se cierre el puño.\n.\n
+        3.Estire lentamente los dedos para empujar la toalla hacia atras de modo que vuelva a quedar plana sobre la mesa.\n.\n
+        4.Repita de 8 a 12 veces.</string>
 
 
     // navbar //

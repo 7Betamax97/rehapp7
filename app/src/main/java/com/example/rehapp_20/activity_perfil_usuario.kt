@@ -32,5 +32,20 @@ class activity_perfil_usuario : AppCompatActivity() {
             startActivity(intent)
 
         }
+        val con_cuenta2: TextView = findViewById(R.id.modulo4ArtrosisMano)
+        con_cuenta2.setOnClickListener {
+
+            val intent: Intent = Intent(this, modulo4:: class.java)
+            startActivity(intent)
+
+        }
+        val con_cuenta3: TextView = findViewById(R.id.textView4)
+        con_cuenta3.setOnClickListener {
+
+            val intent: Intent = Intent(this, modulo55:: class.java)
+            startActivity(intent)
+
+
+        }
         }
     }
