@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/azulModulo1"
+    android:layout_gravity="center"
+    android:background="@drawable/rectangle4"
     tools:context=".activity_inicio_sesion">
 
     <ScrollView
@@ -24,7 +25,7 @@
                 android:layout_height="91dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="80dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="30dp"
                 android:src="@drawable/logo_iniciosesion" />
 
             <ImageView
@@ -33,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/rehappnombre_iniciosesion"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="40dp" />
+                android:layout_marginBottom="80dp" />
 
             <EditText
                 android:id="@+id/text_Nombre_inicio"
@@ -50,7 +51,7 @@
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="18sp"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="8dp" />
 
             <EditText
                 android:id="@+id/tex_Contraseña_inicio"
@@ -69,20 +70,74 @@
                 android:textSize="18sp"
                 android:layout_marginBottom="20dp" />
 
-            <ImageView
-                android:id="@+id/linkcuenta"
-                android:layout_width="180dp"
-                android:layout_height="56dp"
-                android:src="@drawable/boton_login"
-                android:layout_gravity="center_horizontal" />
 
-            <ImageView
-                android:id="@+id/linkRegistro"
-                android:layout_width="180dp"
-                android:layout_height="56dp"
+            <Button
+                android:id="@+id/ButtonLinkCuenta"
+                android:layout_width="185dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:text="inicio sesion"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/botones_amarillos_inicio_sesion" />
+
+            <Button
+                android:id="@+id/ButtonLinkRegistro"
+                android:layout_width="185dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:text="registro paciente"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/botones_amarillos_inicio_sesion" />
+
+            <Button
+                android:id="@+id/ButtonRegistroFisio"
+                android:layout_width="185dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:textSize="13sp"
+                android:text="registro fisioterapeuta"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/botones_amarillos_inicio_sesion" />
+
+            <TextView
+                android:id="@+id/textViewOr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="40dp"
-                android:src="@drawable/boton_registrarse" />
+                android:textAlignment="center"
+                android:text="---------  or  ---------"
+                android:textSize="18dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButtonFaceboock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/iconofaceboock" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewOlvideContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:text="Forgot password?"
+                android:textSize="14dp"/>
 
         </LinearLayout>
     </ScrollView>
