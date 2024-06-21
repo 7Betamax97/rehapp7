@@ -39,7 +39,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:src="@drawable/imagen_registro" />
+                android:src="@drawable/logo_crear_cuenta" />
 
             <EditText
                 android:id="@+id/textView_Nombre_usuario"
@@ -101,30 +101,83 @@
                 android:textSize="16sp"
                 android:background="@drawable/border"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
 
 
-
-            <ImageView
-                android:id="@+id/Registro_Exitoso"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/textViewOr"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/botonlogin"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"/>
+                android:textAlignment="center"
+                android:text="---------  or  ---------"
+                android:textColor="@color/white"
+                android:textSize="18dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButtonGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="center"
+                    android:background="@color/material_on_surface_stroke"
+                    app:srcCompat="@drawable/google" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonFaceboock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/material_on_surface_stroke"
+                    app:srcCompat="@drawable/iconofaceboock" />
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/ButtonRegistroExitoso"
+                android:layout_width="185dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:textSize="13sp"
+                android:text="Start to learn"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/botones_amarillos_inicio_sesion" />
+
+            <TextView
+                android:id="@+id/textViewOlvideContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:text="Forgot password?"
+                android:textSize="14dp"/>
 
             <ImageView
                 android:id="@+id/image_nombre_registro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
                 android:layout_marginBottom="16dp"
 
                 android:src="@drawable/nombre_registro" />
 
         </LinearLayout>
+
+
     </ScrollView>
 </LinearLayout>

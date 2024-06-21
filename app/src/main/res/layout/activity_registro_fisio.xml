@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/fondoRegistrioFisio"
+    android:background="@drawable/imagen_registro_fisio"
     tools:context=".activity_registro_fisio">
 
     <ScrollView
@@ -27,13 +27,17 @@
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/logo_iniciosesion" />
 
-            <ImageView
-                android:id="@+id/image_crear_cuenta_fisio"
+            <TextView
+                android:id="@+id/text_titulo_registro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/rehappnombre_iniciosesion"
+                android:text="CREAR CUENTA FISIOTERAPEUTA"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="italic|bold"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="40dp" />
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"/>
 
             <EditText
                 android:id="@+id/text_Nombre_fisio"
@@ -131,14 +135,18 @@
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
                 android:textSize="18sp"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="30dp" />
 
-            <ImageView
-                android:id="@+id/imagen_registrarce"
-                android:layout_width="180dp"
-                android:layout_height="56dp"
-                android:src="@drawable/boton_registrarse"
-                android:layout_gravity="center_horizontal" />
+            <Button
+                android:id="@+id/ButtonRegistrarFisioterapeuta"
+                android:layout_width="185dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:textSize="13sp"
+                android:text="Strart Teaching"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/botones_amarillos_inicio_sesion" />
 
         </LinearLayout>
     </ScrollView>

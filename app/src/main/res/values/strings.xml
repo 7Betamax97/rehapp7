@@ -3,11 +3,8 @@
 
     // strings bienvenida
     <string name="titulo_bienvenida">!BIENVENIDO¡</string>
-    <string name="parrafo_bienvenida">Bienvenido/a a nuestra aplicación rehapp! Estamos emocionados
-        de tenerte a bordo en este viaje hacia la recuperación y fortalecimiento de tu mano.
-        Nuestra aplicación ofrece una variedad de ejercicios y actividades diseñados para mejorar
-        la movilidad, fuerza y destreza de tu mano. Ya sea que estés recuperándote de una lesión,
-        una cirugía o simplemente deseas fortalecer tus manos</string>
+    <string name="parrafo_bienvenida">Aquí encontrarás los recursos necesarios para aprender y mejorar
+        tus terapias de rehabilitación para tus manos, gracias por utilizar Rehapp</string>
 
     // strings registros , usuarios e inicio sesion
 
