@@ -6,8 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_gravity="center"
+    android:layout_gravity="center_horizontal"
     android:paddingBottom="40dp"
+    android:padding="15dp"
     android:background="@color/fondoEncueta"
     tools:context=".activity_encuesta1">
 
@@ -15,10 +16,10 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="30dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
         android:layout_marginBottom="10dp"
-        app:srcCompat="@drawable/nombre_encuesta" />
+        app:srcCompat="@drawable/logo_crear_cuenta" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -502,29 +503,20 @@
 
 
                 >
-
-                <ImageButton
-                    android:id="@+id/logo_encuesta"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_centerHorizontal="true"
-                    android:background="@color/fondoEncueta"
-                    app:srcCompat="@drawable/logo_fin_encuesta"
-
-                    />
-
-                <TextView
-                    android:id="@+id/textView_terminar_encuesta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="false"
+                <Button
+                    android:id="@+id/ButtonRegistroFisio"
+                    android:layout_width="185dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="16dp"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="80dp"
-                    android:background="@color/white"
-                    android:text="@string/boton_finalizar_encuesta"
-                    android:textColor="@color/azulModulo1" />
+                    android:textSize="13sp"
+                    android:text="Start to learn"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/botones_amarillos_inicio_sesion" />
+
 
             </RelativeLayout>
 
