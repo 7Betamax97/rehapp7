@@ -14,7 +14,7 @@ class activity_registro_usuario : AppCompatActivity() {
         val txt: Button = findViewById(R.id.ButtonRegistroExitoso)
         txt.setOnClickListener {
 
-            val intent: Intent = Intent(this, activity_inicio_sesion:: class.java)
+            val intent: Intent = Intent(this, registro_exitoso:: class.java)
             startActivity(intent)
         }
         val con_cuenta: ImageView = findViewById(R.id.image_nombre_registro)

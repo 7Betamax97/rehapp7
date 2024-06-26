@@ -504,7 +504,7 @@
 
                 >
                 <Button
-                    android:id="@+id/ButtonRegistroFisio"
+                    android:id="@+id/ButtonFinalizarEncuesta"
                     android:layout_width="185dp"
                     android:layout_height="43dp"
                     android:layout_gravity="center"
