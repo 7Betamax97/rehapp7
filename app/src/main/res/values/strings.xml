@@ -200,5 +200,9 @@
     <string name="logo_navbar_inicio">inicio</string>
     <string name="logo_navbar_vr">Realidad Virtual</string>
     <string name="logo_navbar_config">Configuracion</string>
+    <string name="ic_calendario" />
+    <string name="ic_home">home</string>
+    <string name="ic_perfil">perfil</string>
+    <string name="ic_atras">atras</string>
 
 </resources>
