@@ -21,5 +21,7 @@
     <color name="fondo_calendario">#1E1E1E</color>
     <color name="fondo_cardCalendario">#20232D</color>
 <color name="titulosModulos">#9AE3FD</color>
+    <color name="fondoModulosRosado">#F5EBEB</color>
+    <color name="color_texto_completo">#0091FF</color>
 
 </resources>

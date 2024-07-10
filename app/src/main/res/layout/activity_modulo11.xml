@@ -5,23 +5,32 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="20dp"
+    android:padding="20dp"
     android:orientation="vertical"
-    android:background="@color/verdeFondoModulos"
+    android:gravity="center_horizontal"
+    android:background="@drawable/fondomodulo1_1"
     tools:context=".modulo1">
+
+    <TextView
+        android:id="@+id/textViewtitulo_modulo1ejercicio2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:text="Modulo 1.2"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
+
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/azulModulo1.2"
-        android:text="Modulo 1"
-        android:drawableStart="@drawable/menu"
-        android:drawableEnd="@drawable/logo_nombre_modulos"
+        android:layout_height="wrap_content"
+        android:text="flexion y extension de muñeca"
         android:padding="15dp"
-        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="17sp"
         android:textStyle="bold|italic" />
 
 
@@ -32,142 +41,169 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/text_titulo1ejercicio"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="20dp"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:paddingTop="5dp"
-                android:background="@color/white"
-                android:drawableStart="@drawable/vectoramarillo"
-                android:textStyle="bold"
-                android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
-                android:text="@string/titulo_modulo1_ejercicio3" />
             <VideoView
                 android:id="@+id/video_ejercicio1"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_margin="15dp"/>
-
-            <TextView
-                android:id="@+id/text_descripcion_ejercicio1"
+                android:layout_height="200dp" />
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/descripcion_modulo1ejercicio3"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="15dp"
-                android:textSize="12sp"
-
-                />
-            <TextView
-                android:id="@+id/text_titulo2ejercicio"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:orientation="vertical"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                android:paddingTop="5dp"
-                android:background="@color/white"
-                android:drawableStart="@drawable/vectoramarillo"
-                android:textStyle="bold"
-                android:layout_marginEnd="15dp"
-                android:layout_marginStart="15dp"
-                android:text="@string/titulo_modulo1_ejercicio4" />
+                android:layout_marginHorizontal="30dp"
+                android:background="@color/white">
 
-            <VideoView
-                android:id="@+id/video_ejercicio2"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_margin="15dp"/>
 
-            <TextView
-                android:id="@+id/text_descripcion_ejercicio2"
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/imagefoto_fisio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_ejercicio" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="16dp">
+
+                        <TextView
+                            android:id="@+id/textView_completo_mod1_ejercicio2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="complete"
+                            android:textSize="16sp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/textView_ejercicio2_modulo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ejercicio 2:"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView_descripcion_modulo1_ejercicio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp"
+                    android:text="@string/descripcion_modulo1_ejercicio2"
+                    android:textSize="12sp"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/descripcion_modulo1_ejercicio4"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="15dp"
-                android:textSize="12sp"/>
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="30dp">
 
+                <ImageButton
+                    android:id="@+id/imageButton_retroceder_modulo1.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/retroceder_en_modulo"
+                    android:backgroundTint="@color/fondoModulosRosado"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"/>
+
+                <ImageButton
+                    android:id="@+id/imageButton_nombre_modulo1.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/nombre_modulos"
+                    android:backgroundTint="@color/fondoModulosRosado"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"/>
+
+                <ImageButton
+                    android:id="@+id/imageButton_avanzar_modulo1.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/avanzar_en_modulos"
+                    android:backgroundTint="@color/fondoModulosRosado"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"/>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
+        <LinearLayout
+            android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_alignParentBottom="true"
-            android:background="@color/verdeNavbar"
-            android:translationZ="-5dp"
-            app:itemBackground="@color/verdeNavbar"
-            app:itemIconTint="@color/white"
-            app:itemTextColor="@color/white">
+            android:orientation="horizontal"
+            android:background="@drawable/fondo_barranavegacion"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_alignParentBottom="true">
 
-
-            <LinearLayout
-                android:layout_width="400dp"
+            <ImageButton
+                android:id="@+id/nav_home"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:background="@color/verdeNavbar"
-                android:orientation="horizontal"
-                android:padding="15dp">
+                android:src="@drawable/ic_home"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/ic_home" />
 
-                <ImageView
-                    android:id="@+id/imageView_perfil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/logo_navbar_perfil"
-                    android:src="@drawable/logo_perfil" />
+            <ImageButton
+                android:id="@+id/nav_calendario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_calendario"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/ic_calendario"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp" />
 
-                <ImageView
-                    android:id="@+id/imageView_modulos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/logo_navbar_modulos"
-                    android:src="@drawable/logo_modulos" />
 
-                <ImageView
-                    android:id="@+id/imageView_inicio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/logo_navbar_inicio"
-                    android:src="@drawable/logo_inicio" />
+            <ImageButton
+                android:id="@+id/nav_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_atrascalendario"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/ic_atras" />
 
-                <ImageView
-                    android:id="@+id/imageView_realidad_virtual"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/logo_navbar_vr"
-                    android:src="@drawable/logo_vr" />
+            <ImageButton
+                android:id="@+id/nav_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_perfil"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/ic_perfil"
+                android:layout_marginLeft="40dp" />
 
-                <ImageView
-                    android:id="@+id/imageView_configuracion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/logo_navbar_config"
-                    android:src="@drawable/logo_config" />
-
-            </LinearLayout>
-
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
+        </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
