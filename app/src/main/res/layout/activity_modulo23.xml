@@ -8,16 +8,16 @@
     android:padding="20dp"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="@drawable/fondomodulo_2"
-    tools:context=".modulo2">
+    android:background="@drawable/fondomodulo_23"
+    tools:context=".activity_modulo23">
 
 
     <TextView
-        android:id="@+id/textViewtitulo_modulo2ejercicio1"
+        android:id="@+id/textViewtitulo_modulo2ejercicio3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Modulo 2.1"
+        android:text="Modulo 2.3"
         android:padding="15dp"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -28,7 +28,7 @@
         android:id="@+id/textViewNombreEjercicio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Extensión de dedos"
+        android:text="Desviación Radial y Cubital de la Muñeca"
         android:padding="15dp"
         android:textColor="@color/white"
         android:textSize="17sp"
@@ -47,7 +47,7 @@
             android:layout_gravity="center_horizontal">
 
             <VideoView
-                android:id="@+id/video_ejercicio1"
+                android:id="@+id/video_ejercicio3"
                 android:layout_width="match_parent"
                 android:layout_height="200dp" />
 
@@ -87,7 +87,7 @@
                         android:layout_marginLeft="16dp">
 
                         <TextView
-                            android:id="@+id/textView_completo_modulo2_ejercicio1"
+                            android:id="@+id/textView_completo_modulo2_ejercicio3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
@@ -96,10 +96,10 @@
                             android:textColor="@color/black" />
 
                         <TextView
-                            android:id="@+id/textView_ejercicio1_modulo2"
+                            android:id="@+id/textView_ejercicio3_modulo2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="ejercicio 2:"
+                            android:text="ejercicio 3:"
                             android:textSize="22sp"
                             android:textStyle="bold"
                             android:textColor="@color/black" />
@@ -108,13 +108,13 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView_descripcion_modulo2_ejercicio1"
+                    android:id="@+id/textView_descripcion_modulo2_ejercicio3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:paddingHorizontal="20dp"
                     android:paddingVertical="10dp"
-                    android:text="@string/descripcion_modulo2_ejercicio1"
+                    android:text="@string/descripcion_modulo2_ejercicio3"
                     android:textSize="12sp"
                     android:textColor="@color/black" />
 
@@ -129,7 +129,7 @@
                 android:layout_marginHorizontal="30dp">
 
                 <ImageButton
-                    android:id="@+id/imageButton_retroceder_modulo2.1"
+                    android:id="@+id/imageButton_retroceder_modulo2.3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/retroceder_en_modulo"
@@ -138,7 +138,7 @@
                     android:layout_marginHorizontal="10dp"/>
 
                 <ImageButton
-                    android:id="@+id/imageButton_nombre_modulo2.1"
+                    android:id="@+id/imageButton_nombre_modulo2.3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/nombre_modulos"
@@ -147,7 +147,7 @@
                     android:layout_marginHorizontal="20dp"/>
 
                 <ImageButton
-                    android:id="@+id/imageButton_avanzar_modulo2.1"
+                    android:id="@+id/imageButton_avanzar_modulo2.3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/avanzar_en_modulos"
