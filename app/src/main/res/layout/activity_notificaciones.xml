@@ -60,7 +60,7 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="24dp"
                     android:padding="5dp"
-                    android:background="@color/fondo_card_calendario">
+                    android:background="@color/azulModulo1.2">
 
                     <ImageView
                         android:id="@+id/imagefoto_usuario"

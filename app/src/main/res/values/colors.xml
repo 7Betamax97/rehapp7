@@ -19,5 +19,6 @@
     <color name="fondo_card_notificaciones">#20232D</color>
     <color name="fondo_calendario">#1E1E1E</color>
     <color name="fondo_cardCalendario">#20232D</color>
+    <color name="azulCalendario">#007BA4</color>
 
 </resources>
