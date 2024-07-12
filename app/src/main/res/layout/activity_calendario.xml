@@ -313,7 +313,6 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_calendario"
             android:background="@android:color/transparent"
-            android:contentDescription="@string/ic_calendario"
             android:layout_marginLeft="32dp"
             android:layout_marginRight="32dp" />
 
