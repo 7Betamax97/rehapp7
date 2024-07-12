@@ -3,6 +3,7 @@ package com.example.rehapp_20
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 
 class activity_registro_usuario : AppCompatActivity() {
@@ -10,10 +11,10 @@ class activity_registro_usuario : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro_usuario)
 
-        val txt: ImageView = findViewById(R.id.Registro_Exitoso)
+        val txt: Button = findViewById(R.id.ButtonRegistroExitoso)
         txt.setOnClickListener {
 
-            val intent: Intent = Intent(this, activity_inicio_sesion:: class.java)
+            val intent: Intent = Intent(this, registro_exitoso:: class.java)
             startActivity(intent)
         }
         val con_cuenta: ImageView = findViewById(R.id.image_nombre_registro)

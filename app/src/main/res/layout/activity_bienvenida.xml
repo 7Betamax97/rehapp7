@@ -1,78 +1,80 @@
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="30dp"
+    android:background="@drawable/inicio_bienvenida"
+    tools:context=".activity_inicio_sesion">
 
-    <LinearLayout
-        android:id="@+id/main"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/verdeBienvenida"
-        tools:context=".activity_bienvenida">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/titulo_bienvenida"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="16dp"
-            android:gravity="center"
-            android:text="@string/titulo_bienvenida"
-            android:fontFamily="sans-serif"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageNombreApp_bienvenida"
-            android:layout_width="179dp"
-            android:layout_height="63dp"
-            android:src="@drawable/nombrerehapp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="30dp"/>
+            android:orientation="vertical">
 
 
-        <VideoView
-            android:id="@+id/videoBienvenida"
-            android:layout_width="314dp"
-            android:layout_height="154dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="16dp" />
 
-        <TextView
-            android:id="@+id/textPresentacionApp"
-            android:layout_width="335dp"
-            android:layout_height="148dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="sans-serif"
-            android:gravity="center"
-            android:text="@string/parrafo_bienvenida"
-            android:textSize="14sp" />
+            <ImageView
+                android:id="@+id/imageNombreApp_bienvenida"
+                android:layout_width="179dp"
+                android:layout_height="63dp"
+                android:src="@drawable/nombrerehapp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="80dp"/>
 
-        <ImageView
-            android:id="@+id/imageLogoBienvenida"
-            android:layout_width="91dp"
-            android:layout_height="94dp"
-            android:src="@drawable/logobienvenida"
-            android:layout_gravity="center"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="10dp"/>
 
-        <ImageButton
-            android:id="@+id/buttonavanzardeBienvenida"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/verdeBienvenida"
-            android:src="@drawable/frame__1_"
-            android:layout_gravity="center"/>
 
-    </LinearLayout>
-</ScrollView>
+
+            <TextView
+                android:id="@+id/titulo_bienvenida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Bienvenidos a Nuestra plataforma"
+                android:textSize="30sp" />
+
+
+
+            <TextView
+                android:id="@+id/textPresentacionApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="@string/parrafo_bienvenida"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/Button_iniciar_sesion"
+                android:layout_width="185dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="150dp"
+                android:textSize="13sp"
+                android:text="Iniciar Sesion"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/botones_amarillos_inicio_sesion" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
