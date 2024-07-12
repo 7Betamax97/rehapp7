@@ -16,15 +16,12 @@
     <color name="grismodulo2">#C7CBC7</color>
     <color name="azulmodulo3">#61BBD9</color>
     <color name="verdemodulo4">#A2C3A3</color>
-    <color name="fondo_card_notificaciones">#20232D</color>
-    <color name="fondo_calendario">#1E1E1E</color>
-    <color name="fondo_cardCalendario">#20232D</color>
     <color name="azulCalendario">#007BA4</color>
     <color name="botones_amarillos_inicio_sesion">#FCDB00</color>
     <color name="fondo_card_notificaciones">#20232D</color>
     <color name="fondo_calendario">#1E1E1E</color>
     <color name="fondo_cardCalendario">#20232D</color>
-<color name="titulosModulos">#9AE3FD</color>
+    <color name="titulosModulos">#9AE3FD</color>
     <color name="fondoModulosRosado">#F5EBEB</color>
     <color name="cardview_fin_modulos">#0091FF</color>
 
