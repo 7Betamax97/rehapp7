@@ -5,35 +5,70 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="@drawable/fondomodulo1_1"
     tools:context=".modulo11">
 
 
-    <TextView
-        android:id="@+id/textViewtitulo_modulo1ejercicio2"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Modulo 1.2"
-        android:padding="15dp"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold|italic" />
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/texttitulo_modulo1ejercicio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginHorizontal="10dp"
+            android:text="Modulo 1.1"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
 
 
-    <TextView
-        android:id="@+id/textViewNombreEjercicio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="flexión y extensión de muñeca"
-        android:padding="15dp"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/textViewNombreEjercicio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="Flexión de la muñeca con peso"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold|italic" />
 
+        <ImageView
+            android:id="@+id/image1modulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:padding="10dp"
+            android:src="@drawable/cuarto_dia" />
+
+        <ImageView
+            android:id="@+id/image2modulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:paddingHorizontal="20dp"
+            android:padding="10dp"
+            android:src="@drawable/barra_modulo1" />
+
+        <ImageView
+            android:id="@+id/image3modulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:padding="10dp"
+            android:src="@drawable/dia1" />
+
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,7 +76,7 @@
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal">
@@ -96,7 +131,7 @@
                             android:textColor="@color/black" />
 
                         <TextView
-                            android:id="@+id/textView_ejercicio2_modulo1"
+                            android:id="@+id/textView_ejercicio1_modulo2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="ejercicio 2:"
@@ -112,6 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:padding="20dp"
                     android:text="@string/descripcion_modulo1_ejercicio2"
                     android:textSize="12sp"
                     android:textColor="@color/black" />
@@ -124,13 +160,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
+                <ImageView
+                    android:id="@+id/imagemodulo_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_playcalendario"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"/>
 
                 <LinearLayout
                     android:id="@+id/bottom_navigation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="70dp"
                     android:background="@drawable/fondo_barranavegacion"
                     android:gravity="center"
                     android:padding="16dp"
