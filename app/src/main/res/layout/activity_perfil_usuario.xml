@@ -1,293 +1,298 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="20dp"
     android:orientation="vertical"
-    android:background="@color/azulModulo1"
+    android:background="#11263C"
     tools:context=".activity_perfil_usuario">
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:background="@color/azulModulo1.2"
-        android:drawableStart="@drawable/menu"
-        android:drawableEnd="@drawable/logo_nombre_modulos"
-        android:padding="10dp"
-        android:layout_margin="1dp"
-        android:gravity="center"
-        android:text="!Hello friend¡"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="55dp"
+        android:foregroundGravity="center_horizontal"
+        app:cardCornerRadius="80dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profe"
+            android:scaleType="centerCrop"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Javier Ramirez"
+        android:textColor="@color/textColorNombreUsuario"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/texto_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="eljavi@hotmail.com"
+        android:textSize="17sp"
+        android:layout_gravity="center_horizontal"
+        android:padding="3dp"
+        android:textColor="@color/textGmailUsuario"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        android:textColor="@color/textColorEdadPesoEstatura"
+        android:textSize="30sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="-250dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hecho"
+        android:textColor="@color/textColorEdadPesoEstatura"
+        android:textSize="30sp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="22dp"
+        android:layout_marginTop="-40dp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="215dp"
+        android:foregroundGravity="center_horizontal"
+        app:cardCornerRadius="15dp"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="10dp"
+            android:background="@color/black">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/nivel"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="10dp">
-                <ImageView
-                    android:id="@+id/imageView7"
-                    android:layout_width="118dp"
-                    android:layout_height="113dp"
-                    android:layout_marginStart="40dp"
-                    android:src="@drawable/icon_perfil" />
+                android:text="NIVEL 1"
+                android:textSize="20sp"
+                android:padding="1dp"
+                android:textColor="@color/white"/>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="40dp"
-                    android:orientation="vertical"
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:src="@drawable/baseline_hotel_class_24"
+                android:layout_marginStart="10dp"/>
 
-                    >
-                    <EditText
-                        android:id="@+id/editTextText"
-                        android:layout_width="161dp"
-                        android:layout_height="34dp"
-                        android:drawableStart="@drawable/imagen_nombre_usuario"
-                        android:ems="10"
-                        android:hint="Nombre"
-                        android:inputType="text"
-                        android:textSize="14sp" />
+        </LinearLayout>
 
-                    <EditText
-                        android:id="@+id/editTextTextEmailAddress"
-                        android:layout_width="161dp"
-                        android:layout_height="34dp"
-                        android:drawableStart="@drawable/imagen_correo_usuario"
-                        android:ems="10"
-                        android:hint="Correo"
-                        android:inputType="textEmailAddress"
-                        android:textSize="14sp" />
+    </androidx.cardview.widget.CardView>
 
-                    <EditText
-                        android:id="@+id/editTextPhone"
-                        android:layout_width="161dp"
-                        android:layout_height="34dp"
-                        android:drawableStart="@drawable/imagen_telefono_usuario"
-                        android:ems="10"
-                        android:hint="Telefono"
-                        android:inputType="phone"
-                        android:textSize="14sp" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="15dp">
 
-                </LinearLayout>
-
-            </LinearLayout>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="@color/fondoCardViewPerfilUsuario">
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="30dp">
-
-                <ImageButton
-                    android:id="@+id/imageButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/borde_menu_edad">
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/azulModulo1"
-                    android:src="@drawable/imagen_boton_preferencias" />
-
-
-
-                <ImageButton
-                    android:id="@+id/imageButton2"
+                    android:text="edad"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"/>
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/azulModulo1"
-                    android:src="@drawable/imagen_boton_editar" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
+                    android:text="45"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColorEdadPesoEstatura"/>
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/modulo1RehabilitacionMuñeca"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="10dp"
-                android:background="@color/white"
-                android:drawableStart="@drawable/vectoramarillo"
-                android:drawableEnd="@drawable/flecha_amarilla"
-                android:gravity="center_vertical"
-                android:paddingEnd="5dp"
-                android:text="Modulo1:Rehabilitacion para fractura de muñeca"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/modulo2SindromeTunel"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@color/white"
-                android:gravity="center_vertical"
-                android:drawableStart="@drawable/vectoramarillo"
-                android:drawableEnd="@drawable/flecha_amarilla"
-                android:layout_margin="10dp"
-                android:paddingEnd="5dp"
-                android:text="Módulo 2.Ejercicios para aliviar el sindrome del tunel carpiano"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/modulo3DedoGatillo"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="10dp"
-                android:gravity="center_vertical"
-                android:paddingEnd="5dp"
-                android:background="@color/white"
-                android:drawableStart="@drawable/vectoramarillo"
-                android:drawableEnd="@drawable/flecha_amarilla"
-                android:text="Módulo 3. Ejercicios para mejorar dedo en gatillo"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/modulo4ArtrosisMano"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@color/white"
-                android:gravity="center_vertical"
-                android:drawableStart="@drawable/vectoramarillo"
-                android:drawableEnd="@drawable/flecha_amarilla"
-                android:layout_margin="10dp"
-                android:paddingEnd="5dp"
-                android:text="Módulo 4. Artrosis de mano y de los dedos  "
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="10dp"
-                android:background="@color/white"
-                android:gravity="center_vertical"
-                android:paddingEnd="5dp"
-                android:drawableStart="@drawable/vectoramarillo"
-                android:drawableEnd="@drawable/flecha_amarilla"
-                android:text="@string/modulo5enlace"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_margin="10dp"
-                android:padding="10dp"
-                android:background="@color/white"
-                android:drawableStart="@drawable/icono_fisioterapeuta"
-                android:drawableEnd="@drawable/flecha_amarilla"
-                android:drawablePadding="10dp"
-                android:text="fisioterapeuta"
-                android:textSize="17sp" />
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-
-                />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="70dp">
-
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    app:srcCompat="@android:drawable/ic_menu_add"
-
-                    android:backgroundTint="@color/azulModulo1"/>
-
-                <ImageButton
-                    android:id="@+id/imagefoto_fisio1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/vector_fisio_perfil_usuario"
-                    android:src="@drawable/fisio_perfil_usuario" />
-
-                <ImageButton
-                    android:id="@+id/imagefoto_fisio2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/vector_fisio_perfil_usuario"
-                    android:src="@drawable/fisio_perfil_usuario" />
-
-                <ImageButton
-                    android:id="@+id/imagefoto_fisio3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/vector_fisio_perfil_usuario"
-                    android:src="@drawable/fisio_perfil_usuario" />
-
-                <ImageButton
-                    android:id="@+id/imagefoto_fisio4"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/vector_fisio_perfil_usuario"
-                    android:src="@drawable/fisio_perfil_usuario" />
-            </LinearLayout>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="70dp"
-                android:layout_marginVertical="5dp">
-
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/borde_menu_edad">
                 <TextView
-                    android:id="@+id/mensajePerfil"
-                    android:layout_width="118dp"
-                    android:layout_height="40dp"
-                    android:text="mensajes"
-                    android:background="@drawable/vector_titulo_modulos"
-                    android:layout_marginEnd="10dp"
-                    android:textSize="17dp"
-                    android:padding="8dp"
-                    android:drawableStart="@drawable/buson_correo"
-                    android:drawablePadding="5dp" />
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Peso"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"/>
                 <TextView
-                    android:id="@+id/calendarioPerfil"
-                    android:layout_width="130dp"
-                    android:layout_height="40dp"
-                    android:text="calendario"
-                    android:background="@drawable/vector_titulo_modulos"
-                    android:padding="8dp"
-                    android:textSize="17sp"
-                    android:drawableStart="@drawable/imagen_calendario"
-                    android:drawablePadding="5dp" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="68kg"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColorEdadPesoEstatura"/>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estatura"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.60cm"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColorEdadPesoEstatura"/>
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textview_primer_nombre"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Nombres"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="35dp"
+        android:textColor="@color/white"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_nombre"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="30dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp">
+
+        <EditText
+            android:id="@+id/edit_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:padding="12dp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/textview_apellido"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:text="Apellidos"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:textColor="@color/white"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_apellido"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="30dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp">
+
+        <EditText
+            android:id="@+id/edit_apellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellidos"
+            android:padding="12dp" />
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/textview_ubicacion"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Ubicacion"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:textColor="@color/white"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_ubicacion"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="30dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp">
+
+        <EditText
+            android:id="@+id/edit_ubicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Dirección"
+            android:padding="12dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textview_numero"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:text="Numero de Contacto"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:textColor="@color/white"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_numero"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="30dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp">
+
+        <EditText
+            android:id="@+id/edit_numero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="+57***********"
+            android:padding="12dp" />
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

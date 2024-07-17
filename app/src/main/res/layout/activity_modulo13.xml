@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:layout_marginHorizontal="10dp"
-            android:text="Modulo 1.3"
+            android:text="Modulo 1"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold|italic" />
@@ -45,7 +45,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginHorizontal="20dp"
             android:padding="10dp"
-            android:src="@drawable/cuarto_dia" />
+            android:src="@drawable/dia1" />
 
         <ImageView
             android:id="@+id/image2modulo"
@@ -54,16 +54,9 @@
             android:layout_marginEnd="20dp"
             android:paddingHorizontal="20dp"
             android:padding="10dp"
-            android:src="@drawable/barra_modulo1" />
+            android:src="@drawable/barra1diamodulo1" />
 
-        <ImageView
-            android:id="@+id/image3modulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:layout_marginHorizontal="20dp"
-            android:padding="10dp"
-            android:src="@drawable/dia1" />
+
 
 
     </LinearLayout>
@@ -161,7 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:src="@drawable/ic_playcalendario"
+                    android:src="@drawable/play_pantalla_completa"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"/>
 

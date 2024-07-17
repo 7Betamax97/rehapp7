@@ -56,16 +56,9 @@
             android:layout_marginEnd="20dp"
             android:paddingHorizontal="20dp"
             android:padding="10dp"
-            android:src="@drawable/barra_modulo1" />
+            android:src="@drawable/barra4diamodulo2" />
 
-        <ImageView
-            android:id="@+id/image3modulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:layout_marginHorizontal="20dp"
-            android:padding="10dp"
-            android:src="@drawable/dia1" />
+
 
 
     </LinearLayout>
@@ -166,7 +159,7 @@
                     android:id="@+id/imagemodulo_play"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_playcalendario"
+                    android:src="@drawable/play_pantalla_completa"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="true"/>
 

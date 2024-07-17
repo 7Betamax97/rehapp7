@@ -24,8 +24,11 @@
     <color name="fondo_card_notificaciones">#20232D</color>
     <color name="fondo_calendario">#1E1E1E</color>
     <color name="fondo_cardCalendario">#20232D</color>
-<color name="titulosModulos">#9AE3FD</color>
+    <color name="titulosModulos">#9AE3FD</color>
     <color name="fondoModulosRosado">#F5EBEB</color>
     <color name="cardview_fin_modulos">#0091FF</color>
-
+    <color name="textColorNombreUsuario">#A6EC00</color>
+    <color name="textGmailUsuario">#70716E</color>
+    <color name="fondoCardViewPerfilUsuario">#203447</color>
+    <color name="textColorEdadPesoEstatura">#0D6EFD</color>
 </resources>
