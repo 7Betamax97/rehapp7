@@ -31,4 +31,5 @@
     <color name="textGmailUsuario">#70716E</color>
     <color name="fondoCardViewPerfilUsuario">#203447</color>
     <color name="textColorEdadPesoEstatura">#0D6EFD</color>
+    <color name="fondoEditarPerfil">#002E2F</color>
 </resources>
