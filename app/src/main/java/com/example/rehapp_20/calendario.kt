@@ -1,8 +1,18 @@
 package com.example.rehapp_20
 
+import android.annotation.SuppressLint
+import android.app.AlarmManager
 import android.app.AlertDialog
 import android.app.DatePickerDialog
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -11,34 +21,56 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import java.util.Calendar
 
 class calendario : AppCompatActivity() {
-    val selectedCalendar = Calendar.getInstance()
+    private val selectedCalendar = Calendar.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_calendario)
 
+        val BotonNotificacion=findViewById<Button>(R.id.btn_crear_cita)
+        crearCanal()
+        BotonNotificacion.setOnClickListener()
+        {
+            checkPermisos()
+        }
+
     }
+    @SuppressLint("StringFormatMatches")
     fun onClickScheduledDate(view: android.view.View){
         val etScheduledDate = findViewById<EditText>(R.id.btn_go_to_calendario)
 
         val year = selectedCalendar.get(Calendar.YEAR)
         val month = selectedCalendar.get(Calendar.MONTH)
         val dayOfMonth = selectedCalendar.get(Calendar.DAY_OF_MONTH)
-        val listener = DatePickerDialog.OnDateSetListener{ datePicker, y, m, d ->
-            selectedCalendar.set(y,m,d)
-            etScheduledDate.setText("$y-$m-$d")
+        val listener = DatePickerDialog.OnDateSetListener{datePicker, y, m, d ->
+            selectedCalendar.set(y, m, d)
+            etScheduledDate.setText(resources.getString(R.string.date_format,
+                y,
+                (m+1).twoDigits(),
+                d.twoDigits()
+            ))
         }
-        DatePickerDialog(this, listener, year, month, dayOfMonth).show()
+        val datePickerDialog= DatePickerDialog(this, listener, year, month, dayOfMonth)
+        val datePicker = datePickerDialog.datePicker
+        val calendar = Calendar.getInstance()
+        calendar.add(Calendar.DAY_OF_MONTH,1)
+        datePicker.minDate = calendar.timeInMillis
+        calendar.add(Calendar.DAY_OF_MONTH,29)
+        datePicker.maxDate = calendar.timeInMillis
+
+        datePickerDialog.show()
 
 
         val spinnerHours =findViewById<Spinner>(R.id.spinner_horas)
 
-        val optionsHours = arrayOf("8:00 a.m.", "9:00 a.m.", "10:00 a.m.", "11:00 a.m.")
+        val optionsHours = arrayOf("8:00 a.m.", "9:00 a.m.", "10:00 a.m.", "11:00 a.m.","12:00 p.m.","1:00 p.m.","2:00 p.m.","3:00 p.m.","4:00 p.m.","5:00 p.m.")
         spinnerHours.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optionsHours)
 
         val spinnerFisio =findViewById<Spinner>(R.id.spinner_fisio)
@@ -52,20 +84,28 @@ class calendario : AppCompatActivity() {
         spinnerModulo.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optionsModulo)
 
         val btnConfirm = findViewById<Button>(R.id.btn_crear_cita)
+        val btnNext = findViewById<Button>(R.id.btn_confirmar)
+
         val cvConfirm = findViewById<CardView>(R.id.cv_crear_cita)
+        val cvResumen = findViewById<CardView>(R.id.cv_resumen)
+
+        btnNext.setOnClickListener{
+            cvConfirm.visibility = View.GONE
+            cvResumen.visibility = View.VISIBLE
+        }
 
         btnConfirm.setOnClickListener{
             Toast.makeText(applicationContext,"Cita creada exitosamente!!", Toast.LENGTH_SHORT).show()
             finish()
         }
 
-
-
-
-
     }
 
+    private fun Int.twoDigits()
+    =if (this>=10) this.toString() else "0$this"
 
+
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Estas seguro que desea salir?")
@@ -82,5 +122,55 @@ class calendario : AppCompatActivity() {
         val dialog = builder.create()
         dialog.show()
 
+    }
+    fun checkPermisos()
+    {
+        var PermisoNotificaciones:String=""
+        if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.TIRAMISU) //verificacion permisos android 13 o superior
+        {
+            PermisoNotificaciones=android.Manifest.permission.POST_NOTIFICATIONS
+            if (ContextCompat.checkSelfPermission(this,PermisoNotificaciones)== PackageManager.PERMISSION_GRANTED)
+            {
+                Toast.makeText(this,"Si tiene permisos",Toast.LENGTH_SHORT).show()
+                notificacionProgramada(15000,"Notificaciones RehApp","RehApp","Tu cita ha sido creada exitosamente, revisa tu app para mas informacion")
+                Funciones().NotificacionInstantanea(this,"Instantanea","Mi texto corto", "Mi texto largo de ejemplo")
+            }
+            else
+            {
+                Toast.makeText(this,"No tiene permisos",Toast.LENGTH_SHORT).show()
+                ActivityCompat.requestPermissions(this, arrayOf(PermisoNotificaciones),100)
+            }
+        }
+        else
+        {
+            Toast.makeText(this,"No necesita permiso de notificaciones",Toast.LENGTH_SHORT).show()
+            notificacionProgramada(15000,"Notificaciones RehApp","RehApp","Tu cita ha sido creada exitosamente, revisa tu app para mas informacion")
+            Funciones().NotificacionInstantanea(this,"Instantanea","Mi texto corto", "Mi texto largo de ejemplo")
+        }
+    }
+
+    private fun notificacionProgramada(retraso:Long, titulo:String, textoCorto:String, textoLargo:String)
+    {
+        val intent= Intent(applicationContext, AlarmaNotificacion::class.java)
+        intent.putExtra("Titulo",titulo)
+        intent.putExtra("TextoCorto",textoCorto)
+        intent.putExtra("TextoLargo",textoLargo)
+        val pendingIntent= PendingIntent.getBroadcast(applicationContext,AlarmaNotificacion.NOTIFICATION_ID,intent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
+
+        val alarmManager=getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        alarmManager.setExact(AlarmManager.RTC_WAKEUP,System.currentTimeMillis()+retraso,pendingIntent)
+
+    }
+
+    fun crearCanal()
+    {
+        if (Build.VERSION.SDK_INT>= Build.VERSION_CODES.O)
+        {
+            val channel=
+                NotificationChannel(AlarmaNotificacion.CHANNEL_ID,"Ejemplo", NotificationManager.IMPORTANCE_DEFAULT)
+
+            val notificationManager: NotificationManager =getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
     }
 }
