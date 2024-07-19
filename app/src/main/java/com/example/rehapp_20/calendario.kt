@@ -44,7 +44,6 @@ class calendario : AppCompatActivity() {
 
     }
 
-
     fun checkPermisos()
     {
         var PermisoNotificaciones:String=""
