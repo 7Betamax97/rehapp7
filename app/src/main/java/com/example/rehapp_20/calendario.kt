@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -42,87 +43,8 @@ class calendario : AppCompatActivity() {
         }
 
     }
-    @SuppressLint("StringFormatMatches")
-    fun onClickScheduledDate(view: android.view.View){
-        val etScheduledDate = findViewById<EditText>(R.id.btn_go_to_calendario)
-
-        val year = selectedCalendar.get(Calendar.YEAR)
-        val month = selectedCalendar.get(Calendar.MONTH)
-        val dayOfMonth = selectedCalendar.get(Calendar.DAY_OF_MONTH)
-        val listener = DatePickerDialog.OnDateSetListener{datePicker, y, m, d ->
-            selectedCalendar.set(y, m, d)
-            etScheduledDate.setText(resources.getString(R.string.date_format,
-                y,
-                (m+1).twoDigits(),
-                d.twoDigits()
-            ))
-        }
-        val datePickerDialog= DatePickerDialog(this, listener, year, month, dayOfMonth)
-        val datePicker = datePickerDialog.datePicker
-        val calendar = Calendar.getInstance()
-        calendar.add(Calendar.DAY_OF_MONTH,1)
-        datePicker.minDate = calendar.timeInMillis
-        calendar.add(Calendar.DAY_OF_MONTH,29)
-        datePicker.maxDate = calendar.timeInMillis
-
-        datePickerDialog.show()
 
 
-        val spinnerHours =findViewById<Spinner>(R.id.spinner_horas)
-
-        val optionsHours = arrayOf("8:00 a.m.", "9:00 a.m.", "10:00 a.m.", "11:00 a.m.","12:00 p.m.","1:00 p.m.","2:00 p.m.","3:00 p.m.","4:00 p.m.","5:00 p.m.")
-        spinnerHours.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optionsHours)
-
-        val spinnerFisio =findViewById<Spinner>(R.id.spinner_fisio)
-
-        val optionsFisio = arrayOf("Fisioterapeuta 1", "Fisioterapeuta 2", "Fisioterapeuta 3", "Fisioterapeuta 4")
-        spinnerFisio.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optionsFisio)
-
-        val spinnerModulo =findViewById<Spinner>(R.id.spinner_modulo)
-
-        val optionsModulo = arrayOf("Rehabilitacion fractura de muñeca", "Ejercicios sindrome tunel carpiano", "Ejercicios mejora dedo en gatillo", "Artrosis mano y dedos", "Extension del dedo")
-        spinnerModulo.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optionsModulo)
-
-        val btnConfirm = findViewById<Button>(R.id.btn_crear_cita)
-        val btnNext = findViewById<Button>(R.id.btn_confirmar)
-
-        val cvConfirm = findViewById<CardView>(R.id.cv_crear_cita)
-        val cvResumen = findViewById<CardView>(R.id.cv_resumen)
-
-        btnNext.setOnClickListener{
-            cvConfirm.visibility = View.GONE
-            cvResumen.visibility = View.VISIBLE
-        }
-
-        btnConfirm.setOnClickListener{
-            Toast.makeText(applicationContext,"Cita creada exitosamente!!", Toast.LENGTH_SHORT).show()
-            finish()
-        }
-
-    }
-
-    private fun Int.twoDigits()
-    =if (this>=10) this.toString() else "0$this"
-
-
-    @SuppressLint("MissingSuperCall")
-    override fun onBackPressed() {
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Estas seguro que desea salir?")
-        builder.setMessage("Si abandonas el registro, los datos ingresados se perderan.")
-        builder.setPositiveButton("Salir"){_, _ ->
-            finish()
-
-        }
-        builder.setNegativeButton("Continuar"){dialog, _ ->
-            dialog.dismiss()
-
-        }
-
-        val dialog = builder.create()
-        dialog.show()
-
-    }
     fun checkPermisos()
     {
         var PermisoNotificaciones:String=""
@@ -173,4 +95,107 @@ class calendario : AppCompatActivity() {
             notificationManager.createNotificationChannel(channel)
         }
     }
+
+    @SuppressLint("StringFormatMatches")
+    fun onClickScheduledDate(view: android.view.View){
+        val etScheduledDate = findViewById<EditText>(R.id.btn_go_to_calendario)
+
+        val year = selectedCalendar.get(Calendar.YEAR)
+        val month = selectedCalendar.get(Calendar.MONTH)
+        val dayOfMonth = selectedCalendar.get(Calendar.DAY_OF_MONTH)
+        val listener = DatePickerDialog.OnDateSetListener{datePicker, y, m, d ->
+            selectedCalendar.set(y, m, d)
+            etScheduledDate.setText(resources.getString(R.string.date_format,
+                y,
+                (m+1).twoDigits(),
+                d.twoDigits()
+            ))
+        }
+        val datePickerDialog= DatePickerDialog(this, listener, year, month, dayOfMonth)
+        val datePicker = datePickerDialog.datePicker
+        val calendar = Calendar.getInstance()
+        calendar.add(Calendar.DAY_OF_MONTH,1)
+        datePicker.minDate = calendar.timeInMillis
+        calendar.add(Calendar.DAY_OF_MONTH,29)
+        datePicker.maxDate = calendar.timeInMillis
+
+        datePickerDialog.show()
+
+
+        val spinnerHours =findViewById<Spinner>(R.id.spinner_horas)
+
+        val optionsHours = arrayOf("8:00 a.m.", "9:00 a.m.", "10:00 a.m.", "11:00 a.m.","12:00 p.m.","1:00 p.m.","2:00 p.m.","3:00 p.m.","4:00 p.m.","5:00 p.m.")
+        spinnerHours.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optionsHours)
+
+        val spinnerFisio =findViewById<Spinner>(R.id.spinner_fisio)
+
+        val optionsFisio = arrayOf("Fisioterapeuta 1", "Fisioterapeuta 2", "Fisioterapeuta 3", "Fisioterapeuta 4")
+        spinnerFisio.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optionsFisio)
+
+        val spinnerModulo =findViewById<Spinner>(R.id.spinner_modulo)
+
+        val optionsModulo = arrayOf("Rehabilitacion fractura de muñeca", "Ejercicios sindrome tunel carpiano", "Ejercicios mejora dedo en gatillo", "Artrosis mano y dedos", "Extension del dedo")
+        spinnerModulo.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, optionsModulo)
+
+        val btnConfirm = findViewById<Button>(R.id.btn_crear_cita)
+        val btnNext = findViewById<Button>(R.id.btn_confirmar)
+
+        val cvConfirm = findViewById<CardView>(R.id.cv_crear_cita)
+        val cvResumen = findViewById<CardView>(R.id.cv_resumen)
+
+        btnNext.setOnClickListener{
+            showAppointmentDataToConfirm()
+            cvConfirm.visibility = View.GONE
+            cvResumen.visibility = View.VISIBLE
+        }
+
+        btnConfirm.setOnClickListener{
+            Toast.makeText(applicationContext,"Cita creada exitosamente!!", Toast.LENGTH_SHORT).show()
+            finish()
+        }
+
+
+    }
+
+    private fun showAppointmentDataToConfirm() {
+        val tvConfirmModule = findViewById<TextView>(R.id.tv_resumen_modulo)
+        val tvConfirmFisio = findViewById<TextView>(R.id.tv_resumen_fisio)
+        val tvConfirmFecha = findViewById<TextView>(R.id.tv_resumen_fecha)
+        val tvConfirmHora = findViewById<TextView>(R.id.tv_resumen_hora)
+
+        val etScheduledDate = findViewById<EditText>(R.id.btn_go_to_calendario)
+        val spinnerHora = findViewById<Spinner>(R.id.spinner_horas)
+        val spinnerModule = findViewById<Spinner>(R.id.spinner_modulo)
+        val spinnerFisioterapeuta = findViewById<Spinner>(R.id.spinner_fisio)
+
+        tvConfirmFecha.text = etScheduledDate.text.toString()
+        tvConfirmFisio.text = spinnerHora.selectedItem.toString()
+        tvConfirmModule.text = spinnerModule.selectedItem.toString()
+        tvConfirmHora.text = spinnerHora.selectedItem.toString()
+    }
+
+    private fun Int.twoDigits()
+    =if (this>=10) this.toString() else "0$this"
+
+    @SuppressLint("MissingSuperCall")
+       override fun onBackPressed() {
+
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Estas seguro que desea salir?")
+        builder.setMessage("Si abandonas el registro, los datos ingresados se perderan.")
+        builder.setPositiveButton("Salir"){_, _ ->
+            finish()
+
+        }
+        builder.setNegativeButton("Continuar"){dialog, _ ->
+            dialog.dismiss()
+
+        }
+
+        val dialog = builder.create()
+        dialog.show()
+
+    }
+
+
 }
